@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container main-header">
+      <!-- <h1 class="list-view">
+        <span>rock</span><span>paper</span><span>scissors</span
+        ><span>lizard</span><span>spock</span>
+      </h1> -->
+      <h1>
+        <img
+          src="./images/logo-bonus.svg"
+          alt="rock paper scissors lizard spock"
+        />
+      </h1>
+
+      <div class="score-board">
+        <h2>score</h2>
+        <p id="score">0</p>
+      </div>
+    </header>
+
+    <main>
+      <div id="page-1">
+        <div class="container play-options-container">
+          <div class="pent-top">
+            <button type="button" class="move-container scissors" id="scissors">
+              <div class="move">
+                <img
+                  src="./images/icon-scissors.svg"
+                  alt="play scissors"
+                  width="40"
+                  height="40"
+                />
+              </div>
+            </button>
+          </div>
+          <div class="pent-mid">
+            <button type="button" class="move-container spock" id="spock">
+              <div class="move">
+                <img
+                  src="./images/icon-spock.svg"
+                  alt="play rock"
+                  width="40"
+                  height="40"
+                />
+              </div>
+            </button>
+            <button type="button" class="move-container paper" id="paper">
+              <div class="move">
+                <img
+                  src="./images/icon-paper.svg"
+                  alt="play paper"
+                  width="40"
+                  height="40"
+                />
+              </div>
+            </button>
+          </div>
+          <div class="pent-bottom">
+            <button type="button" class="move-container lizard" id="lizard">
+              <div class="move">
+                <img
+                  src="./images/icon-lizard.svg"
+                  alt="play lizard"
+                  width="40"
+                  height="40"
+                />
+              </div>
+            </button>
+            <button type="button" class="move-container rock" id="rock">
+              <div class="move">
+                <img
+                  src="./images/icon-rock.svg"
+                  alt="play lizard"
+                  width="40"
+                  height="40"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container flex-between" id="page-2">
+        <!-- <div class="container flex-between">
+          <div class="move-container">
+            <div class="move">
+              <img src="./images/icon-scissors.svg" alt="" />
+            </div>
+          </div>
+        </div> -->
+        <div id="playerMoveContainer"></div>
+        <div id="computerMoveContainer"></div>
+      </div>
+
+      <!-- <div class="game-results">
+        <p>you win</p>
+        <button>play again</button>
+      </div> -->
+
+      <div>
+        <button type="button" id="openModal" aria-label="open rules">
+          Rules
+        </button>
+        <dialog id="modal">
+          <header class="dialog-header">
+            <h3>rules</h3>
+            <button type="button" id="closeModal">
+              <img src="./images/icon-close.svg" alt="close rules" />
+            </button>
+          </header>
+          <img src="./images/image-rules-bonus.svg" alt="" />
+        </dialog>
+      </div>
+    </main>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

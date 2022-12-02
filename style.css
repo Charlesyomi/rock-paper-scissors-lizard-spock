@@ -1,0 +1,248 @@
+html {
+  --background-radial-gradient: radial-gradient(
+    at center top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+
+  --scissors-gradient: linear-gradient(
+    45deg,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+  --paper-gradient: linear-gradient(
+    45deg,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+  --rock-gradient: linear-gradient(
+    45deg,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+  --lizard-gradient: linear-gradient(
+    45deg,
+    hsl(261, 73%, 60%),
+    hsl(261, 72%, 63%)
+  );
+  --cyan: linear-gradient(45deg, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
+
+/* || RESET STYLES */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  text-transform: uppercase;
+}
+/* button {
+  appearance: none;
+  -moz-appearance: none;
+} */
+
+body {
+  background-image: var(--background-radial-gradient);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* overflow-y: hidden; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.main-header {
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 0.2rem solid var(--header-outline);
+  border-radius: 1rem;
+}
+.dialog-header {
+  padding: 1rem;
+  text-transform: uppercase;
+  color: var(--dark-text);
+}
+.dialog-header button {
+  border: hidden;
+  background-color: transparent;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+dialog,
+dialog::after,
+dialog::before {
+  margin: auto;
+  padding: auto;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75%;
+}
+/* @media screen and (min-width: 768px) {
+  .container {
+    max-width: 75%;
+  }
+} */
+
+.list-view {
+  display: flex;
+  flex-direction: column;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score-board {
+  background-color: #fff;
+  align-self: stretch;
+  padding: 2% 10%;
+  border-radius: 0.35rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.score-board h2 {
+  color: var(--score-text);
+  font-size: small;
+  text-transform: uppercase;
+}
+
+.score-board p {
+  color: var(--dark-text);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.play-options-container {
+  max-width: 350px;
+  height: 0.9 * 350px;
+  background-image: url("./images/bg-pentagon.svg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.pent-top {
+  display: flex;
+  justify-content: center;
+}
+.pent-mid {
+  display: flex;
+  justify-content: space-between;
+}
+.pent-bottom {
+  padding-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.move-container {
+  display: flex;
+  justify-content: center;
+  /* background-image: var(--paper-gradient); */
+  padding: 1rem;
+  border-radius: 50%;
+}
+.move {
+  background-image: white;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.move-container.scissors {
+  background-image: var(--scissors-gradient);
+}
+.move-container.paper {
+  background-image: var(--paper-gradient);
+}
+.move-container.rock {
+  background-image: var(--rock-gradient);
+}
+.move-container.lizard {
+  background-image: var(--lizard-gradient);
+}
+.move-container.spock {
+  background-image: var(--cyan);
+}
+button#openModal {
+  display: flex;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  margin: 4rem auto auto;
+  padding: 0.4rem 2rem;
+  border: 0.15rem solid var(--header-outline);
+  border-radius: 0.35rem;
+}
+
+@media screen and (min-width: 768px) {
+  button#openModal {
+    margin: 2rem 2rem 2rem auto;
+  }
+}
+
+/* #page-1 {
+  display: none;
+} */
+/* #page-2 {
+  display: none;
+} */
+.game-results {
+  text-align: center;
+}
+.game-results p {
+  color: white;
+  text-transform: uppercase;
+  font-size: xx-large;
+  font-weight: 700;
+}
+.game-results button {
+  color: hsl(214, 47%, 23%);
+  padding: 0.7rem 3.5rem;
+  margin: 0.5rem auto;
+  border-radius: 0.35rem;
+}
+
+@media screen and (max-width: 768px) {
+  .game-results {
+    margin-top: 3.5rem;
+  }
+}
+
+.comment,
+.game-results .comment {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#page-2 .move-container {
+  margin-left: auto;
+  margin-right: auto;
+}
